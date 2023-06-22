@@ -18,6 +18,7 @@ const Upload = () => {
       } catch (error) {
         console.log("Error uploading file: ", error);
       }
+      window.location.reload()
     }
 
     
@@ -38,6 +39,7 @@ const Upload = () => {
     }
     async function deleteFile(fileKey) {
       await Storage.remove(fileKey, { level: 'public' });
+      window.location.reload()
     }
    
     
@@ -45,7 +47,6 @@ const Upload = () => {
       <div className='ok'>Loading</div>
     )
     
-
 
     return (
         <div style={{padding:'10px 30px', left:'35%', border:'1.5px solid #fff', 
